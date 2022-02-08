@@ -1,2 +1,2 @@
 # pytest-cov-action
-github action workflow for pytest-cov
+- Action doc: [here](https://github.com/MishaKav/pytest-coverage-comment/)
