@@ -41,34 +41,3 @@ jobs:
           junitxml-path: ./pytest.xml
           title: Coverage Report
           badge-title: Coverage
-      
-#       - name: Check the output coverage
-#         run: |
-#           echo "Coverage Percantage - ${{ steps.coverageComment.outputs.coverage }}"
-#           echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
-#           echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
-#           echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
-
-#           echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
-
-#           echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
-#           echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
-#           echo "Coverage Skipped - ${{ steps.coverageComment.outputs.skipped }}"
-#           echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
-#           echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
-#           echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
-          
-#       - name: Pytest coverage comment
-#         uses: MishaKav/pytest-coverage-comment@main
-#         with:
-#           pytest-coverage-path: ./pytest-coverage.txt
-#           title: My Coverage Report Title
-#           badge-title: My Badge Coverage Title
-#           hide-badge: false
-#           hide-report: false
-#           create-new-comment: false
-#           hide-comment: false
-#           report-only-changed-files: false
-#           junitxml-path: ./pytest.xml
-#           junitxml-title: My JUnit Xml Summary Title
-      
