@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 pytest pytest-cov
+          pip install flake8 pytest pytest-cov coverage
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Build coverage file
@@ -41,3 +41,16 @@ jobs:
           junitxml-path: ./pytest.xml
           title: Coverage Report
           badge-title: Coverage
+
+      - name: Run test Coverage package testing
+        id: coverage-package
+        run: |
+          coverage run --source=src,test -m pytest --junitxml=pytest.xml
+      
+      - name: Upload Unit Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: Unit Test Results
+          path: pytest.xml
+
+
